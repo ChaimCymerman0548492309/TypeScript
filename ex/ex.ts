@@ -218,6 +218,14 @@ console.log(averageAge); // יצג: 31.666666666666668
 
 
 
+function printArrayReversed(array: number[] )   {
+    for (let i = array.length - 1; i >= 0; i--) {
+        console.log(array[i]);
+    }
+}
+
+const myArray = [1, 2, 3, 4, 5];
+printArrayReversed(myArray);
 
 
 // // git init
