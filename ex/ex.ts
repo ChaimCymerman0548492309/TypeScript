@@ -132,13 +132,36 @@ function getDobels(arr: number[]): number[] {
 
 console.log(getDobels(arr))
 
-function Dobels(nam1: number,nam2 : number): number {        
-    
+function Dobels(nam1: number, nam2: number): number {
     return nam1 * nam2
 }
 
 
-console.log(Dobels(1,3))
+console.log(Dobels(1, 3))
+
+
+
+function chakPlndrom(nam1: string): boolean {
+    for (let i = 0; i < nam1.length / 2; i++) {
+        if (nam1[i] !== nam1[nam1.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(chakPlndrom('nan')); 
+console.log(chakPlndrom('hello')); 
+
+
+function capitalizeFirstLetter(words: string []) : String [] {
+    return words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+}
+
+const inputArray = ['uppEr', 'loWer', 'MiXeD'];
+const resultArray = capitalizeFirstLetter(inputArray);
+console.log(resultArray); // ['Upper', 'Lower', 'Mixed']
+
 
 
 
