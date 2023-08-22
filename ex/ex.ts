@@ -186,6 +186,33 @@ function getInitials(input: Input): Output {
 const initials: Output = getInitials(input);
 console.log(initials); // { firstInitial: "J", lastInitial: "D" }
 
+interface Person {
+    name: string;
+    age: number;
+}
+
+
+function calculateAverageAge(people : Person[] ) : number {
+    if (people.length === 0) {
+        return 0; // או ערך ברירת מחדל אחר
+    }
+
+    var totalAge = 0;
+    for (var i = 0; i < people.length; i++) {
+        totalAge += people[i].age;
+    }
+
+    var averageAge = totalAge / people.length;
+    return averageAge;
+}
+const peopleArray: Person[] = [
+    { name: "John", age: 25 },
+    { name: "Jane", age: 30 },
+    { name: "Bob", age: 40 },
+];
+
+var averageAge = calculateAverageAge(peopleArray);
+console.log(averageAge); // יצג: 31.666666666666668
 
 
 
