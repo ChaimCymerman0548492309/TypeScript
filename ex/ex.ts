@@ -150,11 +150,11 @@ function chakPlndrom(nam1: string): boolean {
     return true;
 }
 
-console.log(chakPlndrom('nan')); 
-console.log(chakPlndrom('hello')); 
+console.log(chakPlndrom('nan'));
+console.log(chakPlndrom('hello'));
 
 
-function capitalizeFirstLetter(words: string []) : String [] {
+function capitalizeFirstLetter(words: string[]): String[] {
     return words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
 }
 
@@ -163,7 +163,28 @@ const resultArray = capitalizeFirstLetter(inputArray);
 console.log(resultArray); // ['Upper', 'Lower', 'Mixed']
 
 
+interface Input {
+    firstName: string;
+    lastName: string;
+}
 
+interface Output {
+    firstInitial: string;
+    lastInitial: string;
+}
+
+const input: Input = { firstName: "John", lastName: "Doe" };
+const output: Output = { firstInitial: "J", lastInitial: "D" };
+
+function getInitials(input: Input): Output {
+    const firstInitial = input.firstName.charAt(0);
+    const lastInitial = input.lastName.charAt(0);
+    const result: Output = { firstInitial, lastInitial };
+    return result;
+}
+
+const initials: Output = getInitials(input);
+console.log(initials); // { firstInitial: "J", lastInitial: "D" }
 
 
 
